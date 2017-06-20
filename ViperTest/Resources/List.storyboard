@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Show List View Controller-->
+        <scene sceneID="72T-kn-W41">
+            <objects>
+                <tableViewController storyboardIdentifier="ShowListView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Jyk-Gc-xWK" customClass="ShowListViewController" customModule="ViperTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="102" sectionHeaderHeight="28" sectionFooterHeight="28" id="zcc-bC-kzQ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CellList" rowHeight="100" id="jlA-dJ-4CB" customClass="TableViewCell" customModule="ViperTest" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="100"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="jlA-dJ-4CB" id="7bF-kR-IAw">
+                                    <frame key="frameInset" width="375" height="99"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="TJq-Tf-EhY">
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="87" id="tpt-ai-Tnp"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Testando o bom Viper" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YaC-cy-HiR">
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="19" id="bMe-Jw-piR"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10/10/2540" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Ju-bX-Hfo">
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="TJq-Tf-EhY" firstAttribute="top" secondItem="7bF-kR-IAw" secondAttribute="topMargin" constant="7" id="1ei-YF-9J0"/>
+                                        <constraint firstItem="6Ju-bX-Hfo" firstAttribute="trailing" secondItem="7bF-kR-IAw" secondAttribute="trailingMargin" id="El8-jU-muL"/>
+                                        <constraint firstItem="6Ju-bX-Hfo" firstAttribute="top" secondItem="YaC-cy-HiR" secondAttribute="bottom" constant="24" id="GWF-Ud-Kxv"/>
+                                        <constraint firstItem="TJq-Tf-EhY" firstAttribute="leading" secondItem="7bF-kR-IAw" secondAttribute="leadingMargin" id="Mqf-4R-h5S"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="6Ju-bX-Hfo" secondAttribute="bottom" constant="5" id="NXe-21-v6E"/>
+                                        <constraint firstItem="TJq-Tf-EhY" firstAttribute="centerY" secondItem="7bF-kR-IAw" secondAttribute="centerY" constant="3.5" id="VAc-En-rH5"/>
+                                        <constraint firstItem="YaC-cy-HiR" firstAttribute="leading" secondItem="TJq-Tf-EhY" secondAttribute="trailing" constant="8" id="nkC-wt-JkZ"/>
+                                        <constraint firstAttribute="trailing" secondItem="YaC-cy-HiR" secondAttribute="trailing" id="ohL-yd-gMv"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="dateLabel" destination="6Ju-bX-Hfo" id="qo2-9C-MJY"/>
+                                    <outlet property="imgView" destination="TJq-Tf-EhY" id="DBk-F3-Eo1"/>
+                                    <outlet property="titleLabel" destination="YaC-cy-HiR" id="IC4-jw-NGm"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <sections/>
+                        <connections>
+                            <outlet property="dataSource" destination="Jyk-Gc-xWK" id="eCR-MK-l85"/>
+                            <outlet property="delegate" destination="Jyk-Gc-xWK" id="Nlt-Qx-M7z"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <outlet property="tblView" destination="zcc-bC-kzQ" id="wKx-wm-nyg"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3jr-K7-tdk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2538.4000000000001" y="80.50974512743629"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Image" width="580" height="580"/>
+    </resources>
+</document>
